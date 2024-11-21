@@ -40,10 +40,9 @@ myNum = 51;
  }
 
 
-// Let's try and write the function...
+// I think I've missed a trick, as this feels too hard for a 7kyu kata!!
 function replicate(times, number) {
-	debugger;
-  if (times < 0) {
+  if (times <= 0) {
     return [];
   }
   else if (times == 1) {
@@ -53,12 +52,8 @@ function replicate(times, number) {
   if ( typeof(number) === 'number' ) { 
     number = [number];
   }
-  debugger;
-  
-  number.push(number[0]);
 
-  debugger;
-     
+  number.push(number[0]);     
   return replicate (times-1, number );
 }
 
