@@ -42,34 +42,34 @@ myNum = 51;
 
 // Let's try and write the function...
 function replicate(times, number) {
-	if (times < 0) {
+	debugger;
+  if (times < 0) {
     return [];
   }
-  else if (times === 0) {
+  else if (times == 1) {
     return number;
   }
 
-  let arrOfNums;
   if ( typeof(number) === 'number' ) { 
-    arrOfNums = [number];
+    number = [number];
   }
-  else {
-    arrOfNums = number;
-    }
-  console.log(arrOfNums);
-  arrOfNums.push(number);
-  //times-=1;
+  debugger;
+  
+  number.push(number[0]);
+
+  debugger;
      
-  return replicate (times-1, arrOfNums );
-  }
+  return replicate (times-1, number );
+}
 
   
-
-replicate(4, 22);
+console.log("Calling replicate function with (4,11)");
+const answer = replicate(4, 11);
+console.log(answer);
 
 //Wow - I don't know what is going on here but tomorrow I need to learn about debugging in the console, because I can't track these variables! Also, something is very wrong here because this is only supposed to be a 7kyu kata!
 
-
+/*
 
 function replicate2(times, number) {
 	if (times < 0) {
@@ -88,5 +88,38 @@ function replicate2(times, number) {
   return replicate2 (times-1, arrOfNums );
   }
 
-replicate2(4, 22);
+ 
 
+
+
+console.log("Calling replicate2 function with (4,22)");
+replicate2(4, 22);
+ // This one is no good as it resets the array on each call and we never build anything up
+
+
+
+
+function replicate3(times, number) {
+	if (times < 0) {
+    return [];
+  }
+  else if (times === 0) {
+    return number;
+  }
+
+
+  if ( typeof(number) === 'number' ) { 
+    number = [number];  
+    console.log(number);
+  }
+  else {
+    return replicate3 (times-1, number.push(...number[0]) );
+    }
+  }
+
+
+  console.log("Calling replicate3 function with (4,33)");
+  replicate3(4,33);
+
+
+*/

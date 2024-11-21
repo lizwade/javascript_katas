@@ -36,7 +36,7 @@ console.log("Alt 4 took " + timeIt(fakeBin4, testArg));
 
 
 /*
-Wed 13 Nov 2024 
+Thu 14 Nov 2024 
 Fake Binary
 8kyu
 https://www.codewars.com/kata/57eae65a4321032ce000002d/javascript
