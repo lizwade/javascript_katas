@@ -87,3 +87,5 @@ console.log(`itTook is ${itTook}`);
 console.log("Then we'll time it with timeMyFunctionInTheConsole:");
 testValues = setTestValues();
 timeMyFunctionInTheConsole(arrayDiffLiz);
+//TODO: Write a function timeNRuns to perform n runs with one implementation and record average time
+//TODO: Write a function to compare two performance of two implementations using the timeNruns function
